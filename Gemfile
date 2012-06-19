@@ -18,6 +18,9 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+
+  gem 'compass-rails'
+  gem 'compass-h5bp'
 end
 
 group :development, :test do
@@ -35,7 +38,10 @@ end
 
 gem 'jquery-rails'
 gem "haml-rails"
+gem 'html5-rails'
+
 gem 'devise'
+
 gem "ember-rails"
 
 # To use ActiveModel has_secure_password

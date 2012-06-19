@@ -12,11 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require h5bp
 //= require handlebars
 //= require ember
 //= require ember-data
 //= require_self
 //= require only24hrs
 Only24hrs = Ember.Application.create();
-//= require_tree .
+
 //= require ember
