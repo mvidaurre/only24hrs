@@ -46,6 +46,12 @@ gem 'devise'
 
 gem "ember-rails"
 
+#API Clients for Social Media
+gem 'omniauth'
+gem "twitter"
+gem "fb_graph"
+gem 'omniauth-facebook'
+
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
