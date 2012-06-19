@@ -164,6 +164,8 @@ GEM
       libwebsocket (~> 0.1.3)
       multi_json (~> 1.0)
       rubyzip
+    simple-navigation (3.7.0)
+      activesupport (>= 2.3.2)
     sprockets (2.1.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -205,5 +207,6 @@ DEPENDENCIES
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.3)
+  simple-navigation
   sqlite3
   uglifier (>= 1.0.3)

@@ -39,6 +39,7 @@ end
 gem 'jquery-rails'
 gem "haml-rails"
 gem 'html5-rails'
+gem "simple-navigation"
 
 gem 'devise'
 
