@@ -34,6 +34,7 @@ group :production do
 end
 
 gem 'jquery-rails'
+gem "haml-rails"
 gem 'devise'
 
 # To use ActiveModel has_secure_password
