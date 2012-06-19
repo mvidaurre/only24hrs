@@ -23,6 +23,10 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem "database_cleaner"
+  gem "launchy"
+  gem "email_spec"
+  gem "factory_girl_rails"
 end
 
 gem 'jquery-rails'
