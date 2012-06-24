@@ -3,16 +3,18 @@
   = devise_error_messages!
   %fieldset
     %legend Sign up for your new account
+    = f.input :first_name, :placeholder => 'John'
+    = f.input :last_name, :placeholder => 'Doe'
     %div
       = f.label :email
       = f.email_field :email, :placeholder => 'user@domain.com'
       = f.error :email, :id => 'email_error'
     %div
       = f.label :password
-      = f.password_field :password, :hint => 'At least 8 characters long'
+      = f.password_field :password, :hint => 'At least 8 characters long', :placeholder => 'At least 8 characters long'
     %div
       = f.label :password_confirmation
-      = f.password_field :password_confirmation, :hint => 'Should be equal to password'
+      = f.password_field :password_confirmation, :hint => 'Should be equal to password', :placeholder => 'Should be equal to password'
     %div= f.submit "Sign up"
 #login-links
   = render "users/shared/links"

@@ -5,6 +5,8 @@
 //= require_tree ./helpers
 //= require_tree ./templates
 //= require_tree ./routes
+//= require home
+//= require users
 //= require_self
 
 var router = Only24hrs.router = Only24hrs.Router.create({

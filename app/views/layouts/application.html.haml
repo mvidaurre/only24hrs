@@ -8,7 +8,8 @@
     = render "header"
 
     #main{ :role => "main" }
-      = render "flashes"
+      - if flash.keys.length > 0
+        = render "flashes"
       = yield
 
     = render "footer"
