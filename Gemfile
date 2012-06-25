@@ -41,6 +41,7 @@ gem "haml-rails"
 gem 'html5-rails'
 gem "simple-navigation"
 gem 'simple_form'
+gem "lazy_high_charts"
 
 gem 'devise'
 

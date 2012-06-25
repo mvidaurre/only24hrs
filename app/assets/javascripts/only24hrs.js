@@ -8,6 +8,7 @@
 //= require home
 //= require users
 //= require_self
+//= require highcharts
 
 var router = Only24hrs.router = Only24hrs.Router.create({
   location: 'hash'

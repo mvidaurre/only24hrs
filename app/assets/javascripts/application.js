@@ -19,5 +19,3 @@
 //= require_self
 //= require only24hrs
 Only24hrs = Ember.Application.create();
-
-//= require ember
