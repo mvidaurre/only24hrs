@@ -1,4 +1,6 @@
 Only24hrs::Application.routes.draw do
+  get "dashboard/index"
+
   resources :actors
 
   resources :tasks

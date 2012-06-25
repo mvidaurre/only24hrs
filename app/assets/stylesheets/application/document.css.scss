@@ -53,7 +53,7 @@
 
 @mixin black_tab{
   background-color:black;
-  padding-left:1.4em;
+  padding-left:1.3em;
   -moz-border-radius: 0px 0px 15px 15px;
   -webkit-border-radius: 0px 0px 15px 14px;
   border-radius: 0px 0px 15px 15px;
@@ -105,17 +105,19 @@ body {
         margin-top:-.8em;
         margin-right:1em;
         font-size:1.3em;
-        min-width: 5em;
+        min-width: 5.5em;
+        text-align: center;
         &:hover{
           @include black_tab;
         }
         a {
+          margin-left:-1em;
           text-decoration:none;
           color:black;
           &:hover{
             font-weight:bold;
             color:white;
-            margin-left:-0.5em;
+            margin-left:-1em;
           }
         }
         &.selected{
@@ -124,6 +126,51 @@ body {
             color:white;
             font-weight:bold;
           } 
+        }
+        & > ul {
+          padding:0;
+          margin-left:0;
+          margin-top:1em;
+          li {
+            float:none;
+            display:block;
+            margin-top:-.8em;
+            margin-right:1em;
+            font-size:0.8em;
+            min-width: 5.5em;
+            text-align: center;
+            font-weight:normal;
+            &:hover{
+              background-color:black;
+              -moz-border-radius: 0;
+              -webkit-border-radius: 0;
+              border-radius: 0;
+              padding-left:0;
+            }
+            a {
+              margin-left:-1em;
+              text-decoration:none;
+              color:black;
+              &:hover{
+                font-weight:bold;
+                color:white;
+                margin-left:-1em;
+                font-style:italic;
+              }
+            }
+            &.selected{
+              background-color:gray;
+              -moz-border-radius: 0;
+              -webkit-border-radius: 0;
+              border-radius: 0;
+              padding-left:0;
+              a {
+                color:white;
+                font-weight:bold;
+                font-style:italic;
+              } 
+            }
+          }
         }
       }
     }
