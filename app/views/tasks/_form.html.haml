@@ -1,0 +1,14 @@
+= simple_form_for(@task) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :daadline
+    = f.input :priority
+    = f.input :completion
+    = f.input :status
+    = f.input :focus
+    = f.input :goal
+
+  .form-actions
+    = f.button :submit

@@ -1,0 +1,9 @@
+= simple_form_for(@actor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :task
+    = f.input :subject
+
+  .form-actions
+    = f.button :submit

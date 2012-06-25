@@ -1,0 +1,21 @@
+%h1 Listing focuses
+
+%table
+  %tr
+    %th Name
+    %th Description
+    %th
+    %th
+    %th
+
+  - @focuses.each do |focus|
+    %tr
+      %td= focus.name
+      %td= focus.description
+      %td= link_to 'Show', focus
+      %td= link_to 'Edit', edit_focus_path(focus)
+      %td= link_to 'Destroy', focus, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Focus', new_focus_path

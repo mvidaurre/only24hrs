@@ -6,6 +6,11 @@
   %body{ :class => "#{ controller.controller_name }" }
     = render "chromeframe"
     = render "header"
+    - if current_user
+      #logged-links
+        = render partial: "users/shared/logged"
+      %nav#main_nav
+        = render_navigation 
     - if flash.keys.length > 0
       = render "flashes"
       

@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @task.name
+%p
+  %b Daadline:
+  = @task.daadline
+%p
+  %b Priority:
+  = @task.priority
+%p
+  %b completion:
+  = @task.completion
+%p
+  %b Status:
+  = @task.status
+%p
+  %b Focus:
+  = @task.focus
+%p
+  %b Goal:
+  = @task.goal
+
+= link_to 'Edit', edit_task_path(@task)
+\|
+= link_to 'Back', tasks_path

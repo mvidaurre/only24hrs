@@ -1,4 +1,14 @@
 Only24hrs::Application.routes.draw do
+  resources :actors
+
+  resources :tasks
+
+  resources :focuses
+
+  resources :teams
+
+  resources :goals
+
   get "home/index"
 
   devise_for :admins

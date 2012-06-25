@@ -82,6 +82,48 @@ body {
     padding: 0.2em 0.3em;
     width: 100%;
   }
+  nav#main_nav{
+    @include center-in-the-screen;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    ul {
+      background-color:#999999;
+      width:100%;
+      padding:1em 1em;
+      margin-left:0.8em;
+      li {
+        float:left;
+        margin-top:-.8em;
+        margin-right:1em;
+        font-size:1.3em;
+        min-width: 5em;
+        a {
+          text-decoration:none;
+          color:black;
+          &:hover{
+            background-color:black; 
+            font-weight:bold;
+            color:white;
+            padding:0.4em;
+          }
+        }
+      }
+    }
+  }
+  #logged-links {
+    position:fixed;
+    right: 0px;
+    top: 1em;
+    display: block;
+    width: 40%;
+    a {
+      @include logged_button;
+    }
+    input#sign_out{
+      @include logged_button;
+    }
+  }
   #flash{
     @include flash-setup;
     border-color:#336666;
@@ -156,19 +198,6 @@ body {
         float: left;
         margin-right: 2em;
         @include rounded-button;
-      }
-    }
-    #logged-links {
-      position:fixed;
-      right: 0px;
-      top: 1em;
-      display: block;
-      width: 30%;
-      a {
-        @include logged_button;
-      }
-      input#sign_out{
-        @include logged_button;
       }
     }
   }

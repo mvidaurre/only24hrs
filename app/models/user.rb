@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  has_many :actors, :as => :subject
+  has_many :tasks, :through => :actors
+  has_many :teams, :through => :tasks
+  has_many :goals, :through => :tasks
+  has_many :focuses, :through => :tasks
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

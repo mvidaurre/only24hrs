@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Task:
+  = @actor.task
+%p
+  %b Subject:
+  = @actor.subject
+
+= link_to 'Edit', edit_actor_path(@actor)
+\|
+= link_to 'Back', actors_path

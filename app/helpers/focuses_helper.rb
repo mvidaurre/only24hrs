@@ -1,0 +1,2 @@
+module FocusesHelper
+end
