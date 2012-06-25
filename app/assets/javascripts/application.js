@@ -21,5 +21,4 @@
 //= require home
 //= require users
 //= require highcharts
-//= require polyfills
 Only24hrs = Ember.Application.create();
