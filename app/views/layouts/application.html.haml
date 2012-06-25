@@ -6,10 +6,10 @@
   %body{ :class => "#{ controller.controller_name }" }
     = render "chromeframe"
     = render "header"
-
+    - if flash.keys.length > 0
+      = render "flashes"
+      
     #main{ :role => "main" }
-      - if flash.keys.length > 0
-        = render "flashes"
       = yield
 
     = render "footer"

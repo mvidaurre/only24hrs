@@ -1,5 +1,8 @@
-#logged-links
-  = render partial: "users/shared/logged"
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+%h1 Welcome to Only24hrs
+
+= render(partial: "users/sessions/form", locals: { resource: User.new, resource_name: :user })
+#login-links
+  = render(partial: "users/shared/links_for_home", locals: { resource_name: :user })
+
+
 

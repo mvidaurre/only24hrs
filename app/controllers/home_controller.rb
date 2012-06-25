@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @resource_name = :user
+    if current_user
+      render "home/todo"
+    else
+      render
+    end
   end
 end

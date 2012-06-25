@@ -43,6 +43,14 @@
   margin-bottom:1em;
 }
 
+@mixin logged_button{
+  font-size: 0.8em;
+  text-decoration:none;
+  float: right;
+  margin-right: 2em;
+  @include rounded-button;
+}
+
 //Generic settings
 ::-webkit-input-placeholder {
    font-size: 0.9em;
@@ -74,6 +82,12 @@ body {
     padding: 0.2em 0.3em;
     width: 100%;
   }
+  #flash{
+    @include flash-setup;
+    border-color:#336666;
+    background-color: #66FF99;
+    color: #336666;
+  } 
   #main {
     min-height: 100%;
     overflow:auto;
@@ -85,12 +99,6 @@ body {
       background-color: #F0C7D7;
       color: #7D2246;
     }
-    #flash{
-      @include flash-setup;
-      border-color:#336666;
-      background-color: #66FF99;
-      color: #336666;
-    } 
     fieldset{
       @include rounded-border;
       padding: 1em;
@@ -157,11 +165,10 @@ body {
       display: block;
       width: 30%;
       a {
-        font-size: 0.6em;
-        text-decoration:none;
-        float: left;
-        margin-right: 1em;
-        @include rounded-button;
+        @include logged_button;
+      }
+      input#sign_out{
+        @include logged_button;
       }
     }
   }

@@ -1,0 +1,14 @@
+= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %fieldset
+    %legend Sign in to your account
+    %div
+      = f.label :email
+      = f.email_field :email, :placeholder => 'user@domain.com'
+      = f.error :email, :id => 'email_error'
+    %div
+      = f.label :password
+      = f.password_field :password
+    %div
+      = f.check_box :remember_me
+      = f.label 'Yes, remember me', :class => :noalign
+    %div= f.submit "Sign in"
