@@ -22,7 +22,7 @@ Only24hrs::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.assets.precompile += %w( polyfills.js )
+  config.assets.precompile += %w( polyfills.js highcharts.js)
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
