@@ -62,6 +62,14 @@ Only24hrs::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.default :charset => "utf-8"
 
+  ActionMailer::Base.smtp_settings = {
+    :address  => "mail.agiltec.com.mx",
+    :port  => 2525,
+    :user_name  => "only24hrs@agiltec.com.mx",
+    :password  => "OH*agiltec!2012",
+    :authentication  => :login
+  }
+
   # Enable threaded mode
   # config.threadsafe!
 
