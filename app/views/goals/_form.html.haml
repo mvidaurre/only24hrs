@@ -1,9 +1,11 @@
-= simple_form_for(@goal) do |f|
-  = f.error_notification
+%fieldset
+  %legend Create a new Goal
+  = simple_form_for(@goal) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :name
-    = f.input :description
+    .form-inputs
+      = f.input :name, placeholder: "A pie in the sky"
+      = f.input :description, placeholder: "With hard work I could do it", as: :text, size: 4
 
-  .form-actions
-    = f.button :submit
+    .form-actions
+      = f.button :submit

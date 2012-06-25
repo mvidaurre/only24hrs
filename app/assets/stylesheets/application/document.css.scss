@@ -51,6 +51,14 @@
   @include rounded-button;
 }
 
+@mixin black_tab{
+  background-color:black;
+  padding-left:1.4em;
+  -moz-border-radius: 0px 0px 15px 15px;
+  -webkit-border-radius: 0px 0px 15px 14px;
+  border-radius: 0px 0px 15px 15px;
+}
+
 //Generic settings
 ::-webkit-input-placeholder {
    font-size: 0.9em;
@@ -98,15 +106,24 @@ body {
         margin-right:1em;
         font-size:1.3em;
         min-width: 5em;
+        &:hover{
+          @include black_tab;
+        }
         a {
           text-decoration:none;
           color:black;
           &:hover{
-            background-color:black; 
             font-weight:bold;
             color:white;
-            padding:0.4em;
+            margin-left:-0.5em;
           }
+        }
+        &.selected{
+          @include black_tab;
+          a {
+            color:white;
+            font-weight:bold;
+          } 
         }
       }
     }
@@ -149,19 +166,19 @@ body {
       margin-left: auto; 
       legend{
         font-size: smaller;
-        color: grey;
+        color: gray;
       }
 
       div {
-        margin: 0 0 1.5% 20%;
-        font-size: 1.3em;
+        margin: 0 0 1.5% 12%;
+        font-size: 1.1em;
       }
       label{
         float: left;
         text-align: right;
         margin: .52% 2.08% 0 -20%;
-        line-height: 1.1em;
-        width: 35%;
+        line-height: 1.2em;
+        width: 30%;
         &.noalign {
           float:left;
           text-align: left;
@@ -169,11 +186,11 @@ body {
           font-size:0.5em;
         }
       }
-      input{
+      input, textarea{
         display: block;
         line-height: 1em;
-        width: 75%;
-        color: grey;
+        width: 80%;
+        color: gray;
         &:focus{
           color: black;  
         };
@@ -209,7 +226,7 @@ body {
     bottom: 0px;
     text-align:center;
     height:2em;
-    background:black;
+    background:#444444;
   }
 }
 

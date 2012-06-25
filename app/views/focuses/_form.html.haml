@@ -1,9 +1,11 @@
-= simple_form_for(@focus) do |f|
-  = f.error_notification
+%fieldset
+  %legend Create a new Focus
+  = simple_form_for(@focus) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :name
-    = f.input :description
+    .form-inputs
+      = f.input :name, placeholder: "A concentration area as: Work, Family, Travel"
+      = f.input :description, placeholder: "Things that I love to do", as: :text, size: 4
 
-  .form-actions
-    = f.button :submit
+    .form-actions
+      = f.button :submit
