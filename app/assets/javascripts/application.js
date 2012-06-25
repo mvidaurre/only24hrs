@@ -18,4 +18,8 @@
 //= require ember-data
 //= require_self
 //= require only24hrs
+//= require home
+//= require users
+//= require highcharts
+//= require polyfills
 Only24hrs = Ember.Application.create();
