@@ -1,0 +1,12 @@
+= simple_form_for(@progress) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :task
+    = f.input :starts
+    = f.input :ends
+    = f.input :effort
+    = f.input :subject
+
+  .form-actions
+    = f.button :submit

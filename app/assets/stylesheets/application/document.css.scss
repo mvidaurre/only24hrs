@@ -34,7 +34,6 @@
 }
 
 @mixin flash-setup{
-  display:none;
   @include center-in-the-screen;
   @include rounded-border;
   width:60%;
@@ -189,10 +188,25 @@ body {
     }
   }
   #flash{
-    @include flash-setup;
-    border-color:#336666;
-    background-color: #66FF99;
-    color: #336666;
+    display:none;
+    .alert{
+      @include flash-setup;
+      border-color:#7D2246;
+      background-color: #F0C7D7;
+      color: #7D2246; 
+    }
+    .info{
+      @include flash-setup;
+      border-color:#E8CF13;
+      background-color: #F2F0B3;
+      color: #E8CF13;       
+    }
+    .notice{
+      @include flash-setup;
+      border-color:#336666;
+      background-color: #66FF99;
+      color: #336666;      
+    }
   } 
   #main {
     min-height: 100%;
@@ -266,14 +280,19 @@ body {
     }
   }
   #footer{
+    font-size:0.7em;
     position:fixed;
-    color:white;
+    color:#dddddd;
     left: 0px;
     right: 0px;
     bottom: 0px;
     text-align:center;
     height:2em;
     background:#444444;
+    a {
+      color:white;
+      text-decoration:none;
+    }
   }
 }
 

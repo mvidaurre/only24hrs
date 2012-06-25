@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :teams, :through => :tasks
   has_many :goals, :through => :tasks
   has_many :focuses, :through => :tasks
+  has_many :progresses, :as => :subject
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Task:
+  = @progress.task
+%p
+  %b Starts:
+  = @progress.starts
+%p
+  %b Ends:
+  = @progress.ends
+%p
+  %b Effort:
+  = @progress.effort
+%p
+  %b Subject:
+  = @progress.subject
+
+= link_to 'Edit', edit_progress_path(@progress)
+\|
+= link_to 'Back', progresses_path

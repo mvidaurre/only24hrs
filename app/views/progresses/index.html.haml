@@ -1,0 +1,27 @@
+%h1 Listing progresses
+
+%table
+  %tr
+    %th Task
+    %th Starts
+    %th Ends
+    %th Effort
+    %th Subject
+    %th
+    %th
+    %th
+
+  - @progresses.each do |progress|
+    %tr
+      %td= progress.task
+      %td= progress.starts
+      %td= progress.ends
+      %td= progress.effort
+      %td= progress.subject
+      %td= link_to 'Show', progress
+      %td= link_to 'Edit', edit_progress_path(progress)
+      %td= link_to 'Destroy', progress, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Progress', new_progress_path

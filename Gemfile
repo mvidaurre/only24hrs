@@ -38,7 +38,7 @@ end
 
 gem 'jquery-rails'
 gem "haml-rails"
-gem 'html5-rails'
+gem 'html5-rails', :git => "git://github.com/sporkd/html5-rails.git"
 gem "simple-navigation"
 gem 'simple_form'
 gem "lazy_high_charts"

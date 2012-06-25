@@ -51,16 +51,19 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :dashboard, 'Dashboard', dashboard_index_path
     primary.item :goals, 'Goals', goals_path do |sub_nav|
-      sub_nav.item :goals_new, 'New', new_goal_path
+      sub_nav.item :goal_new, 'New', new_goal_path
     end
     primary.item :focuses, 'Focuses', focuses_path do |sub_nav|
-      sub_nav.item :focuses_new, 'New', new_focus_path
+      sub_nav.item :focus_new, 'New', new_focus_path
     end
     primary.item :tasks, 'Tasks', tasks_path do |sub_nav|
-      sub_nav.item :tasks_new, 'New', new_task_path
+      sub_nav.item :task_new, 'New', new_task_path
     end
     primary.item :teams, 'Teams', teams_path do |sub_nav|
-      sub_nav.item :teams_new, 'New', new_team_path
+      sub_nav.item :team_new, 'New', new_team_path
+    end
+    primary.item :progresses, 'Progresses', progresses_path do |sub_nav|
+      sub_nav.item :progress_new, 'New', new_progress_path
     end
 
     # Add an item which has a sub navigation (same params, but with block)

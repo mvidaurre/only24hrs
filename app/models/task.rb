@@ -5,4 +5,5 @@ class Task < ActiveRecord::Base
   has_many :teams, :through => :actors
   belongs_to :focus
   belongs_to :goal
+  has_many :progresses
 end

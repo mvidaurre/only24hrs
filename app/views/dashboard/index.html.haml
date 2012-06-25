@@ -1,3 +1,5 @@
-%h1 Dashboard#index
-%p Find me in app/views/dashboard/index.html.haml
-= high_chart("my_id", @h)
+%h1 Dashboard
+%h2 Team Agiltec
+= high_chart(:team_performance_id, @team_performance)
+%h2 Individual
+= high_chart(:individual_performance_id, @individual_performance)
