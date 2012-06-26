@@ -4,7 +4,7 @@
   %div
     = f.label :email
     %br/
-    = f.email_field :email
+    = f.email_field :email, autofocus: true
   %div= f.submit "Send me reset password instructions"
 #login-links
   = render "users/shared/links"

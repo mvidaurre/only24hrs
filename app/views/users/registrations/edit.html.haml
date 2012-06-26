@@ -6,7 +6,7 @@
     %legend Edit your account data
     %div
       = f.label :current_password
-      = f.password_field :current_password, :placeholder => "(give current password to confirm changes)"
+      = f.password_field :current_password, :placeholder => "(give current password to confirm changes)", autofocus: true
     = f.input :first_name, :placeholder => 'John'
     = f.input :last_name, :placeholder => 'Doe'
     %div

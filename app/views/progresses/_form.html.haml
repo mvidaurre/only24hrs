@@ -1,12 +1,13 @@
-= simple_form_for(@progress) do |f|
-  = f.error_notification
+%fieldset
+  %legend Create a new Progress
+  = simple_form_for(@progress) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :task
-    = f.input :starts
-    = f.input :ends
-    = f.input :effort
-    = f.input :subject
+    .form-inputs
+      = f.association :task
+      = f.input :starts
+      = f.input :ends
+      = f.input :effort
 
-  .form-actions
-    = f.button :submit
+    .form-actions
+      = f.button :submit

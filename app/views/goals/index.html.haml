@@ -1,21 +1,19 @@
-%h1 Listing goals
+%h1 Listing Goals
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
-
-  - @goals.each do |goal|
+%table.striped
+  %thead
     %tr
-      %td= goal.name
-      %td= goal.description
-      %td= link_to 'Show', goal
-      %td= link_to 'Edit', edit_goal_path(goal)
-      %td= link_to 'Destroy', goal, :confirm => 'Are you sure?', :method => :delete
+      %th Name
+      %th Description
+      %th.ar-commands
+        = link_to 'New Goal', new_goal_path
+  %tbody
+    - @goals.each do |goal|
+      %tr
+        %td= goal.name
+        %td= goal.description
+        %td.ar-commands
+          = link_to 'Show', goal
+          = link_to 'Edit', edit_goal_path(goal)
+          = link_to 'Destroy', goal, :confirm => 'Are you sure?', :method => :delete
 
-%br
-
-= link_to 'New Goal', new_goal_path

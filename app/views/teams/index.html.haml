@@ -1,23 +1,20 @@
 %h1 Listing teams
 
-%table
-  %tr
-    %th Name
-    %th User
-    %th Goal
-    %th
-    %th
-    %th
-
-  - @teams.each do |team|
+%table.striped
+  %thead
     %tr
-      %td= team.name
-      %td= team.user
-      %td= team.goal
-      %td= link_to 'Show', team
-      %td= link_to 'Edit', edit_team_path(team)
-      %td= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Team', new_team_path
+      %th Name
+      %th User
+      %th Goal
+      %th.ar-commands
+        = link_to 'New Team', new_team_path
+  %tbody
+    - @teams.each do |team|
+      %tr
+        %td= team.name
+        %td= team.user
+        %td= team.goal
+        %td.ar-commands
+          =link_to 'Show', team
+          = link_to 'Edit', edit_team_path(team)
+          = link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete

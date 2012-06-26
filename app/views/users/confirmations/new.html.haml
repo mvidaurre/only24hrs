@@ -5,7 +5,7 @@
     %legend Resend confirmation instructions
     %div
       = f.label :email
-      = f.email_field :email, :placeholder => 'user@domain.com'
+      = f.email_field :email, :placeholder => 'user@domain.com', autofocus: true
       = f.error :email, :id => 'email_error'
     %div= f.submit "Resend"
 #login-links

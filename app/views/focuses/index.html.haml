@@ -1,21 +1,18 @@
-%h1 Listing focuses
+%h1 Listing Focuses
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th
-    %th
-    %th
-
-  - @focuses.each do |focus|
+%table.striped
+  %thead
     %tr
-      %td= focus.name
-      %td= focus.description
-      %td= link_to 'Show', focus
-      %td= link_to 'Edit', edit_focus_path(focus)
-      %td= link_to 'Destroy', focus, :confirm => 'Are you sure?', :method => :delete
-
-%br
-
-= link_to 'New Focus', new_focus_path
+      %th Name
+      %th Description
+      %th.ar-commands
+        = link_to 'New Focus', new_goal_path
+  %tbody
+    - @focuses.each do |focus|
+      %tr
+        %td= focus.name
+        %td= focus.description
+        %td.ar-commands
+          = link_to 'Show', focus
+          = link_to 'Edit', edit_focus_path(focus)
+          = link_to 'Destroy', focus, :confirm => 'Are you sure?', :method => :delete

@@ -3,7 +3,7 @@
   = devise_error_messages!
   %fieldset
     %legend Sign up for your new account
-    = f.input :first_name, :placeholder => 'John'
+    = f.input :first_name, :placeholder => 'John', autofocus: true
     = f.input :last_name, :placeholder => 'Doe'
     %div
       = f.label :email
