@@ -1,24 +1,24 @@
-%h1 Listing progresses
+%h1 
+  Listing Progresses for Task:
+  = link_to @task.name, task_path(@task)
 
 %table.striped
   %thead
     %tr
-      %th Task
       %th Starts
       %th Ends
       %th Effort
       %th Subject
       %th.ar-commands
-        = link_to 'New Progress', new_progress_path
+        = link_to 'New Progress', new_task_progress_path(@task)
   %tbody
     - @progresses.each do |progress|
       %tr
-        %td= progress.task
         %td= progress.starts
         %td= progress.ends
         %td= progress.effort
         %td= progress.subject
         %td.ar-commands
-          = link_to 'Show', progress
-          = link_to 'Edit', edit_progress_path(progress)
-          = link_to 'Destroy', progress, :confirm => 'Are you sure?', :method => :delete
+          = link_to 'Show', task_progress_path(@task, progress)
+          = link_to 'Edit', edit_task_progress_path(@task, progress)
+          = link_to 'Destroy', task_progress_path(@task, progress), :confirm => 'Are you sure?', :method => :delete

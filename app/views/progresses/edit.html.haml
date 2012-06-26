@@ -1,7 +1,9 @@
-%h1 Editing progress
+%h1
+  Editing Progress for Task:
+  = link_to @task.name, task_path(@task)
 
 = render 'form'
 
-= link_to 'Show', @progress
+= link_to 'Show', task_progress_path(@task, @progress)
 \|
-= link_to 'Back', progresses_path
+= link_to 'Back', task_progresses_path(@task)

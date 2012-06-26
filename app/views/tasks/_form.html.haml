@@ -6,11 +6,13 @@
     .form-inputs
       = f.input :name
       = f.input :daadline
-      = f.input :priority
+      = f.input :priority, :collection => 1..5, :as => :radio_buttons
       = f.input :completion
       = f.input :status
       = f.association :focus
+      = link_to "New Focus", new_focus_path, :class => :button 
       = f.association :goal
+      = link_to "New Goal", new_goal_path, :class => :button 
 
     .form-actions
       = f.button :submit

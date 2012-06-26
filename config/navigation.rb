@@ -62,9 +62,7 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :teams, 'Teams', teams_path do |sub_nav|
       sub_nav.item :team_new, 'New', new_team_path
     end
-    primary.item :progresses, 'Progresses', progresses_path do |sub_nav|
-      sub_nav.item :progress_new, 'New', new_progress_path
-    end
+
 
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|

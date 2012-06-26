@@ -9,6 +9,6 @@
       = f.label :password
       = f.password_field :password
     %div
-      = f.check_box :remember_me
+      = f.check_box :remember_me,:input_html => { :value => '1' }
       = f.label 'Yes, remember me', :class => :noalign
     %div= f.submit "Sign in"

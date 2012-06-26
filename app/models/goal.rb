@@ -3,4 +3,8 @@ class Goal < ActiveRecord::Base
   has_many :tasks
   has_many :users, :through => :tasks
   has_many :teams, :through => :tasks
+
+  def to_s
+    name
+  end
 end

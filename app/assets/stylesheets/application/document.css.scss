@@ -260,6 +260,26 @@ body {
       div {
         margin: 0 0 1.5% 12%;
         font-size: 1.1em;
+        &.radio_buttons{
+          label.radio_buttons{
+            margin: .52% 2.08% 0 -40%;
+            line-height: 1.2em;
+            width: 30%;
+          }
+          width: 80%;
+          float:none;
+          margin: 0 0 1.5% 28%;
+          display:table;
+          label.radio{
+            width:8%;
+            font-size:small;
+            margin-left:0.3em;
+            input{
+              margin-left:0;
+              display:inline;
+            }
+          }
+        }
       }
       label{
         float: left;
@@ -291,6 +311,12 @@ body {
         width: 3%;
         margin-left: 3px;
         vertical-align: -3px;
+      }
+      a.button{
+        @include rounded-button-small;
+        font-size:0.7em;
+        float:right;
+        margin-top:-3em;
       }
     }
     #login-links {

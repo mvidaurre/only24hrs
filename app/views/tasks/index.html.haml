@@ -17,12 +17,13 @@
       %tr
         %td= task.name
         %td= task.daadline
-        %td= task.priority
+        %td= task.priority 
         %td= task.completion
         %td= task.status
         %td= task.focus
         %td= task.goal
         %td.ar-commands
+          = link_to 'Progress', task_progresses_path(task)
           = link_to 'Show', task
           = link_to 'Edit', edit_task_path(task)
           = link_to 'Destroy', task, :confirm => 'Are you sure?', :method => :delete
