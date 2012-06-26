@@ -5,7 +5,7 @@
 
     .form-inputs
       = f.input :name
-      = f.input :daadline
+      = f.input :daadline, :label => "Deadline"
       = f.input :priority, :collection => 1..5, :as => :radio_buttons
       = f.input :completion
       = f.input :status

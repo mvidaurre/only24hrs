@@ -6,8 +6,13 @@ class Task < ActiveRecord::Base
   belongs_to :focus
   belongs_to :goal
   has_many :progresses
+
+  def owners
+    users.map{|u| u.name}
+  end
   
   def to_s
     name
   end
+
 end

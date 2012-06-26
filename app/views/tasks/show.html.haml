@@ -3,8 +3,11 @@
   %h2
     =  link_to @task.name, edit_task_path(@task)
   %p
-    %b Daadline:
+    %b Deadline:
     = @task.daadline
+  %p
+    %b Owners:
+    = @task.owners
   %p
     %b Priority:
     = @task.priority
