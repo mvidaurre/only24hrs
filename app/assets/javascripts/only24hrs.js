@@ -6,6 +6,8 @@
 //= require_tree ./templates
 //= require_tree ./routes
 //= require_self
+
+Only24hrs = Ember.Application.create();
 var router = Only24hrs.router = Only24hrs.Router.create({
   location: 'hash'
 });
