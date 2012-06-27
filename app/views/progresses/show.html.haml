@@ -1,21 +1,21 @@
-%p#notice= notice
-
-%p
-  %b Task:
-  = @progress.task
-%p
-  %b Starts:
-  = @progress.starts
-%p
-  %b Ends:
-  = @progress.ends
-%p
-  %b Effort:
-  = @progress.effort
-%p
-  %b Subject:
-  = @progress.subject
-
-= link_to 'Edit', edit_task_progress_path(@task, @progress)
-\|
-= link_to 'Back', task_progresses_path(@task)
+%fieldset
+  %legend Show Progress data
+  %p
+    %b Task:
+    = @progress.task
+  %p
+    %b Starts:
+    = @progress.starts
+  %p
+    %b Ends:
+    = @progress.ends
+  %p
+    %b Effort:
+    = @progress.effort
+  %p
+    %b Subject:
+    = @progress.subject
+.ar-commands
+  = link_to 'Edit', edit_task_progress_path(@task, @progress)
+  \|
+  = link_to 'Back', task_progresses_path(@task)

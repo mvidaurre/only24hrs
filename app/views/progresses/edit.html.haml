@@ -4,6 +4,7 @@
 
 = render 'form'
 
-= link_to 'Show', task_progress_path(@task, @progress)
-\|
-= link_to 'Back', task_progresses_path(@task)
+.ar-commands
+  = link_to 'Show', task_progress_path(@task, @progress)
+  \|
+  = link_to 'Back', task_progresses_path(@task)

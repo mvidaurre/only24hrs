@@ -1,12 +1,12 @@
-%p#notice= notice
-
-%p
-  %b Name:
-  = @focus.name
-%p
-  %b Description:
-  = @focus.description
-
-= link_to 'Edit', edit_focus_path(@focus)
-\|
-= link_to 'Back', focuses_path
+%fieldset
+  %legend Show focus data
+  %p
+    %b Name:
+    = @focus.name
+  %p
+    %b Description:
+    = @focus.description
+  .ar-commands
+    = link_to 'Edit', edit_focus_path(@focus)
+    \|
+    = link_to 'Back', focuses_path
