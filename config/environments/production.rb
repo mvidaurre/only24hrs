@@ -68,7 +68,8 @@ Only24hrs::Application.configure do
     :domain => "agiltec.com.mx",
     :user_name  => "only24hrs@agiltec.com.mx",
     :password  => "OH*agiltec!2012",
-    :authentication  => :login
+    :authentication  => :login,
+    :enable_starttls_auto => false
   }
 
   # Enable threaded mode
