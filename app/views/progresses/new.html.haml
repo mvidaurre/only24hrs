@@ -1,7 +1,10 @@
 %h1
   New progress for Task:
   = link_to @task.name, task_path(@task)
-
-= render 'form'
+%fieldset
+  %legend 
+    Create a new Progress for
+    = @task
+  = render 'form'
 .ar-commands
   = link_to 'Back', task_progresses_path(@task)

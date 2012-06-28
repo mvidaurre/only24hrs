@@ -2,7 +2,11 @@
   Editing focus 
   =@focus
 
-= render 'form'
+%fieldset
+  %legend
+    Edit the Focus
+    =@focus
+  = render 'form'
 .ar-commands
   = link_to 'Show', @focus
   \|

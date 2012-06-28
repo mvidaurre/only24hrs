@@ -2,7 +2,11 @@
   Editing goal 
   =@goal
 
-= render 'form'
+%fieldset
+  %legend 
+    Edit the Goal
+    =@goal
+  = render 'form'
 .ar-commands
   = link_to 'Show', @goal
   \|

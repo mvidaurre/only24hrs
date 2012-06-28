@@ -10,6 +10,7 @@
       %th Status
       %th Focus
       %th Goal
+      %th Owner(s)
       %th.ar-commands
         = link_to 'New Task', new_task_path
   %tbody
@@ -22,6 +23,7 @@
         %td= task.status
         %td= task.focus
         %td= task.goal
+        %td= task.owners
         %td.ar-commands
           = link_to 'Progress', task_progresses_path(task)
           = link_to 'Show', task

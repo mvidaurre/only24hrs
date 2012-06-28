@@ -1,18 +1,19 @@
-%fieldset
-  %legend Create a new Task
-  = simple_form_for(@task) do |f|
-    = f.error_notification
+= simple_form_for(@task) do |f|
+  = f.error_notification
 
-    .form-inputs
-      = f.input :name
-      = f.input :daadline, :label => "Deadline"
-      = f.input :priority, :collection => 1..5, :as => :radio_buttons
-      = f.input :completion
-      = f.input :status
-      = f.association :focus
-      = link_to "New Focus", new_focus_path, :class => :button 
-      = f.association :goal
-      = link_to "New Goal", new_goal_path, :class => :button 
+  .form-inputs
+    = f.input :name
+    = f.input :daadline, :label => "Deadline"
+    = f.input :priority, :collection => 1..5, :as => :radio_buttons
+    = f.input :completion
+    = f.input :status
+    = f.association :focus
+    = link_to "New Focus", new_focus_path, :class => :button 
+    = f.association :goal
+    = link_to "New Goal", new_goal_path, :class => :button
+    %label
+      Owner(s):
+    = @task.owners
 
-    .form-actions
-      = f.button :submit
+  .form-actions
+    = f.button :submit

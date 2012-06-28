@@ -1,8 +1,11 @@
 %h1
   Editing Progress for Task:
   = link_to @task.name, task_path(@task)
-
-= render 'form'
+%fieldset
+  %legend 
+    Edit the Progress for
+    = @task
+  = render 'form'
 
 .ar-commands
   = link_to 'Show', task_progress_path(@task, @progress)

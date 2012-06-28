@@ -2,7 +2,11 @@
   Editing team 
   = @team
 
-= render 'form'
+%fieldset
+  %legend 
+    Edit the Team
+    = @team
+  = render 'form'
 
 .ar-commands
   = link_to 'Show', @team

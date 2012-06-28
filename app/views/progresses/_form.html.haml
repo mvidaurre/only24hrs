@@ -1,14 +1,10 @@
-%fieldset
-  %legend 
-    Create a new Progress for
-    = @task
-  = simple_form_for(@progress, :url => task_progresses_path(@task)) do |f|
-    = f.error_notification
+= simple_form_for(@progress, :url => task_progresses_path(@task)) do |f|
+  = f.error_notification
 
-    .form-inputs
-      = f.input :starts
-      = f.input :ends
-      = f.input :effort, :collection => %w(10 20 30 40 50 75 100), :as => :radio_buttons, :label => "Effort in %"
+  .form-inputs
+    = f.input :starts
+    = f.input :ends
+    = f.input :effort, :collection => %w(10 20 30 40 50 75 100), :as => :radio_buttons, :label => "Effort in %"
 
-    .form-actions
-      = f.button :submit
+  .form-actions
+    = f.button :submit

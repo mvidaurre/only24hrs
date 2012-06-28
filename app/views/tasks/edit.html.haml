@@ -2,7 +2,11 @@
   Editing task 
   =@task
 
-= render 'form'
+%fieldset
+  %legend 
+    Edit the Task
+    =@task
+  = render 'form'
 .ar-commands
   = link_to 'Show', @task
   \|
