@@ -4,11 +4,20 @@
     %b Name:
     = @team.name
   %p
-    %b User:
-    = @team.user
+    %b Leader:
+    = @team.leader
   %p
-    %b Goal:
-    = @team.goal
+    %b Main Goal:
+    = @team.main_goal
+  %p
+    %b Teammates:
+    = @team.teammates
+  %p
+    %b Goals
+    = @team.goals
+  %p
+    %b Focuses
+    = @team.focuses
 
 .ar-commands
   = link_to 'Edit', edit_team_path(@team)
