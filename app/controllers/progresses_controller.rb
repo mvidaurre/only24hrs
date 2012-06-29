@@ -1,9 +1,10 @@
 class ProgressesController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :setup_task
+
   # GET /progresses
   # GET /progresses.json
   def index
-    @task = Task.find(params[:task_id])
     @progresses = @task.progresses
 
     respond_to do |format|
@@ -15,7 +16,6 @@ class ProgressesController < ApplicationController
   # GET /progresses/1
   # GET /progresses/1.json
   def show
-    @task = Task.find(params[:task_id])
     @progress = @task.progresses.find(params[:id])
 
     respond_to do |format|
@@ -27,7 +27,6 @@ class ProgressesController < ApplicationController
   # GET /progresses/new
   # GET /progresses/new.json
   def new
-    @task = Task.find(params[:task_id])
     @progress = @task.progresses.new
 
     respond_to do |format|
@@ -38,15 +37,13 @@ class ProgressesController < ApplicationController
 
   # GET /progresses/1/edit
   def edit
-    @task = Task.find(params[:task_id])
     @progress = @task.progresses.find(params[:id])
   end
 
   # POST /progresses
   # POST /progresses.json
   def create
-    @task = Task.find(params[:task_id])
-    @progress = @task.progresses.new(params[:progress])
+    @progress = @task.progresses.build(params[:progress])
 
     respond_to do |format|
       if @progress.save
@@ -62,7 +59,6 @@ class ProgressesController < ApplicationController
   # PUT /progresses/1
   # PUT /progresses/1.json
   def update
-    @task = Task.find(params[:task_id])
     @progress = @task.progresses.find(params[:id])
 
     respond_to do |format|
@@ -79,7 +75,6 @@ class ProgressesController < ApplicationController
   # DELETE /progresses/1
   # DELETE /progresses/1.json
   def destroy
-    @task = Task.find(params[:task_id])
     @progress = @task.progresses.find(params[:id])
     @progress.destroy
 
@@ -87,5 +82,11 @@ class ProgressesController < ApplicationController
       format.html { redirect_to task_progresses_url(@task) }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def setup_task
+    @task = Task.find(params[:task_id])
   end
 end

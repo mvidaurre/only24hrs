@@ -2,7 +2,7 @@ Only24hrs::Application.routes.draw do
   
   get "dashboard/index"
 
-  resources :actors
+  #resources :actors
 
   resources :tasks do
     resources :progresses
