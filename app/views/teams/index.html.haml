@@ -4,16 +4,22 @@
   %thead
     %tr
       %th Name
-      %th User
-      %th Goal
+      %th Leader
+      %th Main Goal
+      %th Teammates
+      %th Goals
+      %th Focuses
       %th.ar-commands
         = link_to 'New Team', new_team_path
   %tbody
     - @teams.each do |team|
       %tr
         %td= team.name
-        %td= team.user
-        %td= team.goal
+        %td= team.leader
+        %td= team.main_goal
+        %td= team.teammates
+        %td= team.goals
+        %td= team.focuses
         %td.ar-commands
           =link_to 'Show', team
           = link_to 'Edit', edit_team_path(team)
