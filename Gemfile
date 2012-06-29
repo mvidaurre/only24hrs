@@ -34,6 +34,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'exception_notification'
 end
 
 gem 'jquery-rails'

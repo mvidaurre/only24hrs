@@ -24,6 +24,11 @@ Only24hrs::Application.configure do
 
   config.assets.precompile += %w( polyfills.js )
 
+  config.middleware.use ExceptionNotifier,
+    :email_prefix => "[Only24hrs] ",
+    :sender_address => %{"Only24hrs" <Only24hrs@agiltec.com.mx>},
+    :exception_recipients => %w{manuel.vidaurre@agiltec.com.mx}
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
