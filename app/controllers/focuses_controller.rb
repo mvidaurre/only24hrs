@@ -1,5 +1,5 @@
 class FocusesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user_or_admin!
   # GET /focuses
   # GET /focuses.json
   def index

@@ -25,4 +25,8 @@ class User < ActiveRecord::Base
     name
   end
 
+  def admin_signed_in?
+    false
+  end
+
 end

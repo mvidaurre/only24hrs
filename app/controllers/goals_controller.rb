@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user_or_admin!
   # GET /goals
   # GET /goals.json
   def index

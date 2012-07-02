@@ -1,5 +1,5 @@
 class ProgressesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user_or_admin!
   before_filter :setup_task
 
   # GET /progresses

@@ -1,0 +1,32 @@
+%h1 Listing users
+
+%table.striped
+  %thead
+    %tr
+      %th Name
+      %th email
+      %th Sing in count
+      %th Last sign in at
+      %th Last sign in IP
+      %th Current sign in at
+      %th Current sign in IP
+      %th Twitter
+      %th Facebook
+      %th 
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.name
+        %td= user.email
+        %td= user.sign_in_count
+        %td= user.last_sign_in_at
+        %td= user.last_sign_in_ip
+        %td= user.current_sign_in_at
+        %td= user.current_sign_in_ip
+        %td= user.twitter
+        %td= user.facebook
+        %td.ar-commands
+          =link_to 'Show', user
+          = link_to 'Edit', edit_user_path(user) if can? :edit, user
+          = link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete  if can? :delete, user
+

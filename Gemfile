@@ -45,6 +45,7 @@ gem 'simple_form'
 gem "lazy_high_charts"
 
 gem 'devise'
+gem 'cancan'
 
 gem "ember-rails"
 

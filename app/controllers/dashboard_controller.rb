@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user_or_admin!
   
   def index
     @team_performance = LazyHighCharts::HighChart.new('graph') do |f|

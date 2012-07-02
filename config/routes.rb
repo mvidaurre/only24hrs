@@ -14,11 +14,13 @@ Only24hrs::Application.routes.draw do
 
   resources :goals
 
-  get "home/index"
-
   devise_for :admins
 
   devise_for :users
+  resources :users
+  
+  get "home/index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
