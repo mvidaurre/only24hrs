@@ -59,6 +59,7 @@ gem 'omniauth-facebook'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem "redis"
+gem 'split', :require => 'split/dashboard'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
