@@ -102,6 +102,7 @@ GEM
       tzinfo
     ffi (1.0.11)
     fssm (0.2.9)
+    google-analytics-rails (0.0.3)
     haml (3.1.6)
     haml-rails (0.3.4)
       actionpack (~> 3.0)
@@ -250,6 +251,7 @@ DEPENDENCIES
   exception_notification
   factory_girl_rails
   fb_graph
+  google-analytics-rails
   haml-rails
   html5-rails!
   jquery-rails

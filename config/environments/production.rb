@@ -24,6 +24,8 @@ Only24hrs::Application.configure do
 
   config.assets.precompile += %w( polyfills.js )
 
+  GA.tracker = "UA-29086775-2"
+
   config.middleware.use ExceptionNotifier,
     :email_prefix => "[Only24hrs] ",
     :sender_address => %{"Only24hrs" <Only24hrs@agiltec.com.mx>},
