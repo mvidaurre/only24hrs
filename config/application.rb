@@ -71,5 +71,9 @@ module Only24hrs
       g.view_specs false
       g.helper_specs false
     end
+    
+    Split.configure do |config|
+      config.allow_multiple_experiments = true
+    end
   end
 end

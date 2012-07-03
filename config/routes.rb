@@ -21,6 +21,7 @@ Only24hrs::Application.routes.draw do
   
   get "home/index"
 
+  mount Split::Dashboard, :at => 'split'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

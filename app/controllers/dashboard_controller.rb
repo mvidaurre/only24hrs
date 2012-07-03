@@ -2,6 +2,7 @@ class DashboardController < ApplicationController
   before_filter :authenticate_user_or_admin!
   
   def index
+    finished('menu_dashboard')
     @team_performance = LazyHighCharts::HighChart.new('graph') do |f|
     f.title({ :text=>"Only24hrs Team Performance"})
     f.options[:xAxis][:categories] = ['Work', 'Family', 'Travel', 'Leisure', 'Study']

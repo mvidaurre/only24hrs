@@ -1,3 +1,6 @@
 - if current_user
   = button_to "Sign out", destroy_user_session_path, :method => :delete, :id => :sign_out
   = link_to current_user.name, edit_user_registration_path
+  %strong#date-status
+    Current Date: 
+    %span#clock
