@@ -115,6 +115,15 @@ body {
     padding: 0.2em 0.3em;
     width: 100%;
   }
+  #date-status{
+    float: right;
+    color: white;
+    font-size:small;
+    margin-right:1em;
+    #clock{
+      color: white;
+    }
+  }
   nav#main_nav{
     @include center-in-the-screen;
     list-style: none;
