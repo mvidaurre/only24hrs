@@ -50,9 +50,7 @@ gem 'cancan'
 gem "ember-rails"
 
 #API Clients for Social Media
-gem 'omniauth'
-gem "twitter"
-gem "fb_graph"
+gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 
 # To use ActiveModel has_secure_password
@@ -60,6 +58,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem "redis"
 gem 'split', :require => 'split/dashboard'
+gem 'split-analytics', :require => 'split/analytics'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
