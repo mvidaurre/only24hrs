@@ -7,7 +7,6 @@ class GoalsController < ApplicationController
     @goals = Goal.all
 
     respond_to do |format|
-      finished('menu_goals')
       format.html # index.html.erb
       format.json { render json: @goals }
     end
@@ -30,7 +29,6 @@ class GoalsController < ApplicationController
     @goal = Goal.new
 
     respond_to do |format|
-      finished('menu_goals_new')
       format.html # new.html.erb
       format.json { render json: @goal }
     end

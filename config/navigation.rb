@@ -49,9 +49,9 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            when the item should be highlighted, you can set a regexp which is matched
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
-    primary.item :dashboard, ab_test('menu_dashboard', 'Dashboard', 'Control My Day'), dashboard_index_path
-    primary.item :goals, ab_test('menu_goals', 'Goals', 'My Goals'), goals_path do |sub_nav|
-      sub_nav.item :goal_new, ab_test('menu_goals_new', 'New', 'Add a new'), new_goal_path
+    primary.item :dashboard, 'Dashboard', dashboard_index_path
+    primary.item :goals, 'Goals', goals_path do |sub_nav|
+      sub_nav.item :goal_new, 'New', new_goal_path
     end
     primary.item :focuses, 'Focuses', focuses_path do |sub_nav|
       sub_nav.item :focus_new, 'New', new_focus_path
