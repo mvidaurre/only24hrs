@@ -7,8 +7,9 @@ class Task < ActiveRecord::Base
   belongs_to :goal
   has_many :progresses, :dependent => :destroy
 
-  scope :for_today, lambda { where("daadline like ?", Date.now ) }
-  scope :past_due, lambda { where("daadline < ?", Time.zone.now ) }
+  scope :for_today, lambda { where("daadline like ?", self.time ) }
+  scope :past_due, lambda { where("daadline < ?", self.time ) }
+  scope :to_go, lambda { where("daadline > ?", self.time ) }
 
   def owners
     users.map{|u| u.name}
@@ -16,6 +17,12 @@ class Task < ActiveRecord::Base
   
   def to_s
     name
+  end
+
+  private
+
+  def self.time
+    Time.now.strftime("%Y-%m-%d")
   end
 
 end

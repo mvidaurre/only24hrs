@@ -4,3 +4,14 @@
   %strong#date-status
     Current Date: 
     %span#clock
+    #status
+      #tasks-for-today
+        Tasks for today: 
+        = current_user.tasks.for_today.length
+      #tasks-past-due
+        Tasks past due: 
+        = current_user.tasks.past_due.length
+      #tasks-to-go
+        Tasks to go: 
+        = current_user.tasks.to_go.length
+      
